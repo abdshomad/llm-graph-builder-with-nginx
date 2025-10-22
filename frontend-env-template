@@ -1,0 +1,42 @@
+# Frontend Environment Variables for Nginx Setup
+# Copy this file to frontend/.env and update the values as needed
+
+# Backend API URL - IMPORTANT: Use relative path for nginx proxy
+VITE_BACKEND_API_URL="/api"
+
+# Neo4j Bloom URL
+VITE_BLOOM_URL="https://workspace-preview.neo4j.io/workspace/explore?connectURL={CONNECT_URL}&search=Show+me+a+graph&featureGenAISuggestions=true&featureGenAISuggestionsInternal=true"
+
+# Data Sources Configuration
+VITE_REACT_APP_SOURCES="local,youtube,wiki,s3,web"
+
+# LLM Models Configuration
+VITE_LLM_MODELS="diffbot,openai_gpt_3.5,openai_gpt_4o"
+VITE_LLM_MODELS_PROD="openai_gpt_4o,openai_gpt_4o_mini,diffbot,gemini_1.5_flash"
+
+# Environment
+VITE_ENV="DEV"
+
+# File Processing Configuration
+VITE_TIME_PER_PAGE=50
+VITE_CHUNK_SIZE=5242880
+VITE_CHUNK_OVERLAP=20
+VITE_TOKENS_PER_CHUNK=100
+VITE_CHUNK_TO_COMBINE=1
+VITE_LARGE_FILE_SIZE=5242880
+
+# Authentication (Optional)
+VITE_GOOGLE_CLIENT_ID=""
+VITE_AUTH0_CLIENT_ID=""
+VITE_AUTH0_DOMAIN=""
+VITE_SKIP_AUTH=true
+
+# Chat Configuration
+VITE_CHAT_MODES=""
+VITE_BATCH_SIZE=2
+
+# Frontend Hostname (for nginx proxy)
+VITE_FRONTEND_HOSTNAME="localhost"
+
+# Analytics (Optional)
+VITE_SEGMENT_API_URL=""

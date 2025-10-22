@@ -6,11 +6,16 @@ EXPOSE 8000
 RUN apt-get update && \
    apt-get install -y --no-install-recommends \
        libmagic1 \
-       libgl1-mesa-glx \
+       libgl1-mesa-dev \
+       libglib2.0-0 \
        libreoffice \
        cmake \
        poppler-utils \
-       tesseract-ocr && \
+       tesseract-ocr \
+       libsm6 \
+       libxext6 \
+       libxrender-dev \
+       libgomp1 && \
    apt-get clean && \
    rm -rf /var/lib/apt/lists/*
 # Set LD_LIBRARY_PATH
